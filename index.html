@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Check Housing Assistance Eligibility</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Housing Assistance Eligibility</title>
 
 <style>
-*{box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  margin:0;
   font-family:Arial, Helvetica, sans-serif;
   background:#F5F8FC;
   color:#071225;
@@ -19,50 +18,49 @@ body{
   background:#E8F8EF;
   color:#007A3D;
   text-align:center;
-  padding:13px;
+  padding:12px;
   font-size:14px;
   font-weight:900;
 }
 
 .wrapper{
-  max-width:430px;
-  margin:0 auto;
-  padding:24px 14px;
+  max-width:420px;
+  margin:auto;
+  padding:20px 14px;
 }
 
 .card{
-  background:#fff;
-  border-radius:24px;
-  padding:28px 22px;
+  background:white;
+  border-radius:20px;
+  padding:26px 20px;
   text-align:center;
-  box-shadow:0 14px 35px rgba(0,0,0,.08);
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
 .badge{
-  display:inline-block;
   background:#E8F8EF;
   color:#008543;
-  padding:9px 16px;
+  padding:8px 14px;
   border-radius:999px;
-  font-size:14px;
+  font-size:13px;
   font-weight:900;
-  margin-bottom:18px;
+  display:inline-block;
+  margin-bottom:14px;
 }
 
 h1{
-  font-size:31px;
-  line-height:1.08;
-  margin:0 0 14px;
-  letter-spacing:-.6px;
+  font-size:30px;
+  line-height:1.1;
+  margin-bottom:12px;
 }
 
 .green{color:#22B66E}
 
 .sub{
   color:#5C6B84;
-  font-size:16px;
+  font-size:15px;
   line-height:1.5;
-  margin-bottom:22px;
+  margin-bottom:18px;
 }
 
 .cta{
@@ -70,120 +68,126 @@ h1{
   width:100%;
   background:linear-gradient(135deg,#25BE73,#15985A);
   color:white;
-  padding:18px;
-  border-radius:15px;
-  font-size:18px;
+  padding:16px;
+  border-radius:14px;
+  font-size:17px;
   font-weight:900;
   text-decoration:none;
-  margin:18px 0;
-  box-shadow:0 16px 32px rgba(34,182,110,.28);
+  margin:16px 0;
+  box-shadow:0 12px 25px rgba(34,182,110,.28);
 }
 
 .trust{
-  display:inline-block;
   background:#F3F5F8;
-  color:#5B667A;
-  padding:11px 18px;
+  padding:10px 16px;
   border-radius:999px;
   font-size:13px;
-  font-weight:900;
+  font-weight:800;
+  display:inline-block;
+  color:#5B667A;
 }
 
 .live{
   background:#ECFDF5;
   border:1px solid #BBF7D0;
-  border-radius:16px;
-  padding:14px;
-  color:#166534;
-  font-size:14px;
+  padding:12px;
+  border-radius:14px;
+  margin-top:14px;
+  font-size:13px;
   font-weight:800;
-  margin:16px 0 0;
+  color:#166534;
 }
 
 .section-title{
-  font-size:20px;
+  font-size:18px;
   margin:22px 0 12px;
 }
 
 .steps{
-  background:#fff;
-  border-radius:18px;
-  padding:18px;
-  margin-top:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,.05);
+  background:white;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.05);
 }
 
 .step{
   display:flex;
   gap:10px;
-  text-align:left;
+  margin-bottom:10px;
   font-size:14px;
-  margin-bottom:13px;
-  line-height:1.4;
 }
-
-.step:last-child{margin-bottom:0}
 
 .num{
   background:#2563EB;
   color:white;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:900;
+}
+
+/* INCENTIVE */
+.incentive{
+  border:2px solid #22B66E;
+  background:#F0FFF7;
+  border-radius:16px;
+  padding:16px;
+  margin-top:18px;
+}
+
+.incentive h3{
+  font-size:15px;
+  margin-bottom:6px;
+}
+
+.incentive p{
+  font-size:13px;
+  color:#4B5563;
+}
+
+/* FAQ */
+.dropdown{
+  background:white;
+  border-radius:14px;
+  margin-bottom:8px;
+  border:1px solid #E5E7EB;
+}
+
+.dropdown-q{
+  padding:14px;
+  font-weight:900;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+}
+
+.dropdown-a{
+  display:none;
+  padding:0 14px 14px;
+  font-size:13px;
+  color:#667085;
+}
+
+.plus{
+  background:#ECFDF5;
   width:26px;
   height:26px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:13px;
   font-weight:900;
-  flex-shrink:0;
-}
-
-.dropdown{
-  background:white;
-  border:1px solid #E5E7EB;
-  border-radius:15px;
-  margin-bottom:10px;
-  overflow:hidden;
-  box-shadow:0 6px 16px rgba(0,0,0,.04);
-}
-
-.dropdown-q{
-  padding:15px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-weight:900;
-  font-size:14px;
-  cursor:pointer;
-}
-
-.dropdown-a{
-  display:none;
-  padding:0 15px 15px;
-  color:#667085;
-  font-size:13px;
-  line-height:1.45;
-}
-
-.plus{
-  background:#ECFDF5;
-  color:#16A34A;
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:21px;
-  font-weight:950;
 }
 
 .disclaimer{
-  color:#98A2B3;
-  font-size:11px;
   text-align:center;
-  line-height:1.4;
-  margin-top:16px;
+  font-size:11px;
+  color:#98A2B3;
+  margin-top:14px;
 }
 </style>
 </head>
@@ -191,102 +195,91 @@ h1{
 <body>
 
 <div class="alert" id="alert">
-  🔔 James from Texas just qualified for $1,200 in monthly assistance
+🔔 Someone just qualified for housing assistance
 </div>
 
 <div class="wrapper">
 
-  <div class="card">
-    <div class="badge">• New assistance options available</div>
+<div class="card">
+  <div class="badge">• New assistance options available</div>
 
-    <h1>Check Your <span class="green">Housing Assistance</span> Eligibility Today</h1>
+  <h1>Check Your <span class="green">Housing Assistance</span> Eligibility Today</h1>
 
-    <div class="sub">
-      Many Americans may qualify for rent, utility, grocery, or housing support programs but haven’t checked yet.
-    </div>
-
-    <a href="YOUR_TRACKING_LINK_HERE" class="cta">Check My Eligibility Now →</a>
-
-    <div class="trust">🔒 100% Secure & Confidential</div>
-
-    <div class="live" id="live">
-      🔔 Maria from Florida just qualified for $300 in grocery assistance
-    </div>
+  <div class="sub">
+    Many Americans qualify for rent, utility, and housing support but never check.
   </div>
 
-  <div class="steps">
-    <h2 class="section-title" style="margin-top:0;">How It Works</h2>
+  <a href="YOUR_LINK_HERE" class="cta">Check My Eligibility Now →</a>
 
-    <div class="step">
-      <span class="num">1</span>
-      <span><strong>Quick Check:</strong> Tap the button and start your eligibility check.</span>
-    </div>
+  <div class="trust">🔒 100% Secure & Confidential</div>
 
-    <div class="step">
-      <span class="num">2</span>
-      <span><strong>Verify Info:</strong> Enter basic info like name, address, zip code, email, and phone number.</span>
-    </div>
-
-    <div class="step">
-      <span class="num">3</span>
-      <span><strong>See Options:</strong> Continue to view assistance options that may be available based on your info.</span>
-    </div>
+  <div class="live" id="live">
+    🔔 Maria from Florida just qualified for assistance
   </div>
+</div>
 
-  <h2 class="section-title">Frequently Asked Questions</h2>
+<div class="steps">
+  <h2 class="section-title">How It Works</h2>
 
-  <div class="dropdown">
-    <div class="dropdown-q">Is this free to check? <span class="plus">+</span></div>
-    <div class="dropdown-a">Yes. Checking eligibility is free and there is no obligation.</div>
-  </div>
+  <div class="step"><span class="num">1</span>Quick eligibility check</div>
+  <div class="step"><span class="num">2</span>Enter basic details</div>
+  <div class="step"><span class="num">3</span>See available options</div>
+</div>
 
-  <div class="dropdown">
-    <div class="dropdown-q">How do I know if I qualify? <span class="plus">+</span></div>
-    <div class="dropdown-a">Eligibility depends on your location, income, household situation, and program availability.</div>
-  </div>
+<div class="incentive">
+  <h3>⚡ Priority Access Available</h3>
+  <p>
+    Applications are processed daily. Completing your check now may help you access available assistance faster.
+  </p>
+</div>
 
-  <div class="dropdown">
-    <div class="dropdown-q">What information is needed? <span class="plus">+</span></div>
-    <div class="dropdown-a">The next page may ask for basic details such as name, address, zip code, email, phone number, and date of birth.</div>
-  </div>
+<a href="YOUR_LINK_HERE" class="cta">Start Eligibility Check →</a>
 
-  <div class="dropdown">
-    <div class="dropdown-q">How long does it take? <span class="plus">+</span></div>
-    <div class="dropdown-a">Most people can start the eligibility check in about 1–2 minutes.</div>
-  </div>
+<h2 class="section-title">FAQ</h2>
 
-  <a href="YOUR_TRACKING_LINK_HERE" class="cta">Start Eligibility Check →</a>
+<div class="dropdown">
+  <div class="dropdown-q">Is this free? <span class="plus">+</span></div>
+  <div class="dropdown-a">Yes, checking eligibility is free.</div>
+</div>
 
-  <div class="disclaimer">
-    Not affiliated with any government agency. Results vary by location, eligibility, and program availability.
-  </div>
+<div class="dropdown">
+  <div class="dropdown-q">How long does it take? <span class="plus">+</span></div>
+  <div class="dropdown-a">Most checks take under 2 minutes.</div>
+</div>
+
+<div class="dropdown">
+  <div class="dropdown-q">What do I need? <span class="plus">+</span></div>
+  <div class="dropdown-a">Basic personal and location info.</div>
+</div>
+
+<div class="disclaimer">
+Not affiliated with any government agency. Results vary.
+</div>
 
 </div>
 
 <script>
 const msgs = [
-  "James from Texas just qualified for $1,200 in monthly assistance",
-  "Maria from Florida just qualified for $300 in grocery assistance",
-  "Angela from Georgia just qualified for $100 in utility bills support",
-  "Robert from Ohio just qualified for a housing program",
-  "Denise from Michigan just qualified for $1600 in rent relief options"
+"James from Texas just qualified",
+"Angela from Georgia just qualified",
+"Robert from Ohio just qualified",
+"Denise from Michigan just qualified"
 ];
 
-let i = 0;
+let i=0;
 setInterval(()=>{
-  i = (i + 1) % msgs.length;
-  document.getElementById("alert").textContent = "🔔 " + msgs[i];
-  document.getElementById("live").textContent = "🔔 " + msgs[i];
+i=(i+1)%msgs.length;
+document.getElementById("alert").innerText="🔔 "+msgs[i];
+document.getElementById("live").innerText="🔔 "+msgs[i];
 },4000);
 
 document.querySelectorAll(".dropdown-q").forEach(q=>{
-  q.addEventListener("click",()=>{
-    const answer = q.nextElementSibling;
-    const plus = q.querySelector(".plus");
-    const open = answer.style.display === "block";
-    answer.style.display = open ? "none" : "block";
-    plus.textContent = open ? "+" : "−";
-  });
+q.onclick=()=>{
+const a=q.nextElementSibling;
+const p=q.querySelector(".plus");
+a.style.display=a.style.display==="block"?"none":"block";
+p.innerText=p.innerText==="+"?"−":"+";
+}
 });
 </script>
 
