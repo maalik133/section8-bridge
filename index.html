@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Check Housing Assistance Eligibility</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#F5F8FC;
+  color:#071225;
+}
+
+.alert{
+  background:#E8F8EF;
+  color:#007A3D;
+  text-align:center;
+  padding:13px;
+  font-size:14px;
+  font-weight:900;
+}
+
+.wrapper{
+  max-width:430px;
+  margin:0 auto;
+  padding:24px 14px;
+}
+
+.card{
+  background:#fff;
+  border-radius:24px;
+  padding:28px 22px;
+  text-align:center;
+  box-shadow:0 14px 35px rgba(0,0,0,.08);
+}
+
+.badge{
+  display:inline-block;
+  background:#E8F8EF;
+  color:#008543;
+  padding:9px 16px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:31px;
+  line-height:1.08;
+  margin:0 0 14px;
+  letter-spacing:-.6px;
+}
+
+.green{color:#22B66E}
+
+.sub{
+  color:#5C6B84;
+  font-size:16px;
+  line-height:1.5;
+  margin-bottom:22px;
+}
+
+.cta{
+  display:block;
+  width:100%;
+  background:linear-gradient(135deg,#25BE73,#15985A);
+  color:white;
+  padding:18px;
+  border-radius:15px;
+  font-size:18px;
+  font-weight:900;
+  text-decoration:none;
+  margin:18px 0;
+  box-shadow:0 16px 32px rgba(34,182,110,.28);
+}
+
+.trust{
+  display:inline-block;
+  background:#F3F5F8;
+  color:#5B667A;
+  padding:11px 18px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:900;
+}
+
+.live{
+  background:#ECFDF5;
+  border:1px solid #BBF7D0;
+  border-radius:16px;
+  padding:14px;
+  color:#166534;
+  font-size:14px;
+  font-weight:800;
+  margin:16px 0 0;
+}
+
+.section-title{
+  font-size:20px;
+  margin:22px 0 12px;
+}
+
+.dropdown{
+  background:white;
+  border:1px solid #E5E7EB;
+  border-radius:15px;
+  margin-bottom:10px;
+  overflow:hidden;
+  box-shadow:0 6px 16px rgba(0,0,0,.04);
+}
+
+.dropdown-q{
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:900;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.dropdown-a{
+  display:none;
+  padding:0 15px 15px;
+  color:#667085;
+  font-size:13px;
+  line-height:1.45;
+}
+
+.plus{
+  background:#ECFDF5;
+  color:#16A34A;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:21px;
+  font-weight:950;
+  flex-shrink:0;
+}
+
+.steps{
+  background:#fff;
+  border-radius:18px;
+  padding:18px;
+  margin-top:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.step{
+  display:flex;
+  gap:10px;
+  text-align:left;
+  font-size:14px;
+  margin-bottom:13px;
+  line-height:1.4;
+}
+
+.step:last-child{margin-bottom:0}
+
+.num{
+  background:#2563EB;
+  color:white;
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:900;
+  flex-shrink:0;
+}
+
+.disclaimer{
+  color:#98A2B3;
+  font-size:11px;
+  text-align:center;
+  line-height:1.4;
+  margin-top:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="alert" id="alert">
+  🔔 James from Texas just qualified for $1,200 in monthly assistance
+</div>
+
+<div class="wrapper">
+
+  <div class="card">
+    <div class="badge">• New assistance options available</div>
+
+    <h1>Check Your <span class="green">Housing Assistance</span> Eligibility Today</h1>
+
+    <div class="sub">
+      Many Americans may qualify for rent, utility, grocery, or housing support programs but haven’t checked yet.
+    </div>
+
+    <a href="YOUR_TRACKING_LINK_HERE" class="cta">Check My Eligibility Now →</a>
+
+    <div class="trust">🔒 100% Secure & Confidential</div>
+
+    <div class="live" id="live">
+      🔔 Maria from Florida just qualified for $300 in grocery assistance
+    </div>
+  </div>
+
+  <h2 class="section-title">Programs May Include:</h2>
+
+  <div class="dropdown">
+    <div class="dropdown-q">🏠 Rent Support <span class="plus">+</span></div>
+    <div class="dropdown-a">Programs that may help eligible people with rent or housing-related costs.</div>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropdown-q">⚡ Utility Help <span class="plus">+</span></div>
+    <div class="dropdown-a">Help with electricity, gas, water, or other household utility expenses depending on eligibility.</div>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropdown-q">🛒 Grocery Aid <span class="plus">+</span></div>
+    <div class="dropdown-a">Resources that may help households manage food and grocery costs.</div>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropdown-q">📍 Local Programs <span class="plus">+</span></div>
+    <div class="dropdown-a">Available options may vary by state, city, household size, income, and current availability.</div>
+  </div>
+
+  <div class="steps">
+    <h2 class="section-title" style="margin-top:0;">How It Works</h2>
+
+    <div class="step">
+      <span class="num">1</span>
+      <span><strong>Quick Check:</strong> Tap the button and start your eligibility check.</span>
+    </div>
+
+    <div class="step">
+      <span class="num">2</span>
+      <span><strong>Verify Info:</strong> Enter basic info like name, address, zip code, email, and phone number.</span>
+    </div>
+
+    <div class="step">
+      <span class="num">3</span>
+      <span><strong>See Options:</strong> Continue to view assistance options that may be available based on your info.</span>
+    </div>
+  </div>
+
+  <a href="YOUR_TRACKING_LINK_HERE" class="cta">Start Eligibility Check →</a>
+
+  <h2 class="section-title">Frequently Asked Questions</h2>
+
+  <div class="dropdown">
+    <div class="dropdown-q">Is this free to check? <span class="plus">+</span></div>
+    <div class="dropdown-a">Yes. Checking eligibility is free and there is no obligation.</div>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropdown-q">How do I know if I qualify? <span class="plus">+</span></div>
+    <div class="dropdown-a">Eligibility depends on your location, income, household situation, and program availability.</div>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropdown-q">What information is needed? <span class="plus">+</span></div>
+    <div class="dropdown-a">The next page may ask for basic details such as name, address, zip code, email, phone number, and date of birth.</div>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropdown-q">How long does it take? <span class="plus">+</span></div>
+    <div class="dropdown-a">Most people can start the eligibility check in about 1–2 minutes.</div>
+  </div>
+
+  <a href="YOUR_TRACKING_LINK_HERE" class="cta">Check Eligibility Now →</a>
+
+  <div class="disclaimer">
+    Not affiliated with any government agency. Results vary by location, eligibility, and program availability.
+  </div>
+
+</div>
+
+<script>
+const msgs = [
+  "James from Texas just qualified for $1,200 in monthly assistance",
+  "Maria from Florida just qualified for $300 in grocery assistance",
+  "Angela from Georgia just qualified for $100 in utility bills support",
+  "Robert from Ohio just qualified for a housing program",
+  "Denise from Michigan just qualified for $1600 in rent relief options"
+];
+
+let i = 0;
+setInterval(()=>{
+  i = (i + 1) % msgs.length;
+  document.getElementById("alert").textContent = "🔔 " + msgs[i];
+  document.getElementById("live").textContent = "🔔 " + msgs[i];
+},4000);
+
+document.querySelectorAll(".dropdown-q").forEach(q=>{
+  q.addEventListener("click",()=>{
+    const answer = q.nextElementSibling;
+    const plus = q.querySelector(".plus");
+    const open = answer.style.display === "block";
+    answer.style.display = open ? "none" : "block";
+    plus.textContent = open ? "+" : "−";
+  });
+});
+</script>
+
+</body>
+</html>
